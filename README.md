@@ -1,0 +1,2 @@
+# CGpython
+CodeGym pythone Fondmental
