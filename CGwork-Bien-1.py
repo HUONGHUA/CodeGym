@@ -1,0 +1,37 @@
+# coding utf-8
+import turtle 
+h = turtle.Turtle()
+h.pensize(5)
+h.speed(10)
+h.pencolor('Blue')
+facesize = 200
+h.penup()
+h.goto(0,-200)
+h.pendown()
+h.circle(facesize)
+h.fillcolor("red")
+h.penup()
+h.goto(-100,50)
+h.pendown()
+eye_size = 17.5
+h.begin_fill()
+h.circle(eye_size)
+h.end_fill()
+h.penup()
+h.goto(100,50)
+h.pendown()
+h.begin_fill()
+h.circle(eye_size)
+h.end_fill()
+# nose
+h.penup()
+h.goto(0,50)
+h.pendown()
+h.circle(-70,steps = 3)
+h.penup()
+h.goto(-100,-70)
+h.pendown()
+h.rt(90)
+h.circle(100,180)
+turtle.done()
+
