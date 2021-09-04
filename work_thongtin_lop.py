@@ -70,7 +70,7 @@ def print_person():
 ## Xet đậu - trượt từng thành viên
 print_person()
 print("Danh sách điểm các thanh viên :")
-for i in range(len(person)):
+for i in range(len(person)-1):
     DTB = (person[i][3] + person[i][4])//2
     if DTB >= 75:
         print(f'{person[i][0]} thi đỗ ',DTB)
@@ -80,6 +80,7 @@ for i in range(len(person)):
 ## Thanh viên con lại trong lớp
 print("Danh sách còn lại trong lớp")
 print_person()
+print(len(person))
 
 
 
