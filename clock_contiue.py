@@ -84,19 +84,7 @@ class clock:
         pen.fd(155)
 
 
-#
-# a = clock(12,15,30)
-# a.draw_face()
-# a.draw_time()
-# turtle.done()
 
-
-#     def animate():
-#         global c
-#         d = datetime.datetime.now()
-#         c.hour, c.minute, c.second = d.hour ,d.minute, d.second
-#         c.draw_time()
-#         screen.update()
 def run_time():
     global c
     d = datetime.datetime.now()
