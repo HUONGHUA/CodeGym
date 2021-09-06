@@ -73,24 +73,56 @@ class Student:
         return person
 
     def update_student(self):
-        pass
+        id = input("Vui long nhap id cần cập nhập : ")
+        for key, value in person.items():
+            if id == key:
+                value2 = input("Vui long nhap value cần thay đổi")
+                while True:
+                    x = int(input("Vui long nhập nhập chức năng cần thay đôi"
+                              " 1 ) Họ và tên "
+                              " 2 ) Ngày sinh "
+                              " 3 ) Địa chỉ "
+                              " 4 ) Ngành học "
+                              " 5 ) Lớp học"
+                              ))
+                    for i in range(0,5):
+                        if i == x:
+                            value[x-1] = value2
 
+                    if 0 < x < 6:
+                        break
+
+                print(value)
+                break
+            else:
+                print("Id không tồn tại")
+        return person
     def remove_student(self):
-        pass
+        id = input("Vui long nhap id cân xoá")
+        for key, value in person.items():
+            if id == key:
+                person.pop(id)
+        return person
+
 
     def find_student(self):
         id = input("Vui long nhap id cân tim")
         for key,value in person.items():
-            if id in key:
+            if id == key:
                 print(key ,":",value)
                 break
-
+            else:
+                print("Not Available")
 
 
 
 
     def sort_student(self):
-        pass
+        dict_items = person.items()
+        sorted_items = sorted(dict_items,reverse=True)
+        for i in sorted_items:
+            print(i)
+
 
     def show_menu(self):
         print(
@@ -128,7 +160,7 @@ while True :
         s.find_student()
     elif user_choice == "6":
         s.sort_student()
-    else:
+    elif user_choice == "7":
         print("Exit program : Thank you !")
         break
 
