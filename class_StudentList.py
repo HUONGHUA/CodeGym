@@ -86,6 +86,7 @@ class new_Student:
             else:
                 break
         return add_id
+
     def input_add_thoery(self):
         while True:
             add_thoery = 0
@@ -99,6 +100,7 @@ class new_Student:
             else:
                 print("Sorry.Plese enter again ! ( 0<= Math <=100 )")
         return add_thoery
+
     def input_add_practic(self):
         while True:
             add_practic = 0
@@ -112,7 +114,22 @@ class new_Student:
             else:
                 print("Sorry.Plese enter again ! ( 0<= Math <=100 )")
         return add_practic
-    
+
+    def check_remove_id(self):
+        while True:
+            id_remove = 0
+            try:
+                id_remove = int(input(" Please enter id_remove : "))
+            except ValueError:
+                print("Sorry Enter is not number. Please try again")
+                continue
+            if 101 <= id_remove <= 1000:
+                break
+            else:
+                print("Sorry.Plese enter again ! ( 101 to 1000 )")
+        return id_remove
+
+
 s = new_Student()
 
 while True:
@@ -127,8 +144,8 @@ while True:
     if user_choice == "1":
         s.show()
     elif user_choice == "2":
-        id_remove = input("Please enter ID for remove : ")
-        s.remove(id_remove)
+        a = s.check_remove_id()
+        s.remove(a)
     elif user_choice == "3":
         s.add()
     elif user_choice == "Exit":
